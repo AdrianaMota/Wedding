@@ -1,7 +1,18 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Button,
+	Flex,
+	Heading,
+	Image,
+	Stack,
+	Text,
+} from "@chakra-ui/react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import { useRouter } from "next/router";
 
 export default function Home() {
+	const router = useRouter();
+
 	return (
 		<Flex
 			justifyContent={"center"}
@@ -51,7 +62,7 @@ export default function Home() {
 					return (
 						<ReactFullpage.Wrapper>
 							<div className="section">
-								<Box textAlign="center" color={"#371700"}>
+								<Stack textAlign="center" color={"#371700"}>
 									<Text mb="2rem">
 										Ana Lucia Mota, nos complace invitarle a la boda de
 									</Text>
@@ -66,10 +77,34 @@ export default function Home() {
 									<Text mt="2rem" letterSpacing={"0.26em"}>
 										03.10.22
 									</Text>
-								</Box>
+								</Stack>
+							</div>
+							<div className="section">
+								<Flex flexDirection="column" textAlign={"center"}>
+									<Text>Details</Text>
+									<Text>Details</Text>
+									<Box mb="5rem">
+										<Text fontWeight={"bold"}>Dress Code</Text>
+										<Text>La boda tomará lugar en la 5ta Dominica.</Text>
+									</Box>
+									<Box mt="3rem">
+										<Text fontWeight={"bold"}>Lugar</Text>
+										<Text>La boda tomará lugar en la 5ta Dominica.</Text>
+										<Button
+											colorScheme={"green"}
+											size="lg"
+											onClick={() => router.push("#")}
+										>
+											Cómo Llegar
+										</Button>
+									</Box>
+								</Flex>
 							</div>
 							<div className="section">
 								<Text>Registry</Text>
+							</div>
+							<div className="section">
+								<Text>RSVP</Text>
 							</div>
 						</ReactFullpage.Wrapper>
 					);
