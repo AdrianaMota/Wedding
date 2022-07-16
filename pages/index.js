@@ -23,6 +23,7 @@ export default function Home() {
 			p="5rem"
 		>
 			<Box bgColor={"#FAF3ED"} position={"absolute"} inset="5rem"></Box>
+
 			<Image
 				position="absolute"
 				top="2rem"
