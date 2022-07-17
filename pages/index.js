@@ -94,7 +94,11 @@ export default function Home() {
 										<Button
 											colorScheme={"green"}
 											size="lg"
-											onClick={() => router.push("#")}
+											onClick={() =>
+												router.push(
+													"https://www.google.com/maps/place/Quinta+Dominica/@18.4713072,-69.8879331,17z/data=!4m5!3m4!1s0x8eaf883d1811bd5d:0xc598883a435b9cfd!8m2!3d18.4712971!4d-69.8857427"
+												)
+											}
 										>
 											Cómo Llegar
 										</Button>
